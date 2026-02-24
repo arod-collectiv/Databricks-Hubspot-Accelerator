@@ -53,7 +53,7 @@ On completion, verify resources in the Azure Portal under the deployed resource 
 Databricks Notebooks (HubSpot)
 After infrastructure deployment, import the Databricks notebooks and configure your cluster/workspace to access the deployed ADLS Gen2 and Key Vault-backed secrets.
 Notebook flow
+00_hubspot_config_and_scopes -> 01_hubspot_full_load -> 02_hubspot_incremental_load_crm
 
-
-Config notebook (01_Config)
-Sets HubSpot connection settings, storage paths, schemas, and creates control/audit structures (watermarks, load logs). Secrets should be retrieved via Databricks secret scopes (backed by Key Vault where applicable).
+### NOTE:
+The app must be configured on the Hubspot side, discussion around which tables are relevant for needs should take place before any real development takes place.
